@@ -10,15 +10,38 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import styled from 'styled-components';
+
+const Video = styled.div`
+  height: 100vh;
+  width: 100vw;
+`
+
+const Container = styled.div`
+  height: 100%;
+  width:100%
+`
+
+const Slide1 = styled.iframe`
+  display: none;
+`
+
+const Slide2 = styled.iframe`
+  display: block;
+  z-index: 1000;
+  position: absolute;
+`
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <Video>
+        <Container className="music">
+          <Slide2 src="https://www.youtube.com/embed/S-VICwVEoBQ?ecver=2&autoplay=1&mute=1" width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
+          <Slide1 src="https://www.youtube.com/embed/N0KRSny4eTU?ecver=2&autoplay=1" width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide1>
+        </Container>
+      </Video>
     );
   }
 }
