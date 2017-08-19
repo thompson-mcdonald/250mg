@@ -14,15 +14,19 @@ import messages from './messages';
 import styled from 'styled-components';
 
 let visList = [
-  "https://www.youtube.com/embed/Tpba70L2BLo?ecver=2&autoplay=1&mute=1",
-  "https://www.youtube.com/embed/S-VICwVEoBQ?ecver=2&autoplay=1&mute=1",
-  "https://www.youtube.com/embed/NM2wtte1JRE?ecver=2&autoplay=1&mute=1"
+  "https://www.youtube.com/embed/Tpba70L2BLo?ecver=2&autoplay=1&showinfo=0&mute=1&controls=0",
+  "https://www.youtube.com/embed/S-VICwVEoBQ?ecver=2&autoplay=1&showinfo=0&mute=1&controls=0",
+  "https://www.youtube.com/embed/NM2wtte1JRE?ecver=2&autoplay=1&showinfo=0&mute=1&controls=0",
+  "https://www.youtube.com/embed/OWvmlMmgbwI?ecver=2&autoplay=1&showinfo=0&mute=1&controls=0",
+  "https://www.youtube.com/embed/XS-59dxplXo?ecver=2&autoplay=1&showinfo=0&mute=1&controls=0"
 ]
 
 let musicList = [
   "https://www.youtube.com/embed/N0KRSny4eTU?ecver=2&autoplay=1",
   "https://www.youtube.com/embed/FqgawnJLLiE?ecver=2&autoplay=1",
-  "https://www.youtube.com/embed/iiuhJPFTw9s?ecver=2&autoplay=1"
+  "https://www.youtube.com/embed/iiuhJPFTw9s?ecver=2&autoplay=1",
+  "https://www.youtube.com/embed/GJgXdSVFnJE?ecver=2&autoplay=1",
+  "https://www.youtube.com/embed/15wX9ftFAOI?ecver=2&autoplay=1"
 
 ]
 
@@ -82,7 +86,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <Video>
         <Container className="music">
           <Slide3 src={printLine(vis, 1)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide3>
-          <Slide2 src={printLine(vis, 0)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
+          <Slide2 src={printLine(vis, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
           <Slide1 src={printLine(music, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide1>
         </Container>
       </Video>
