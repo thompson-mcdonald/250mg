@@ -13,6 +13,7 @@ import React from 'react';
 import messages from './messages';
 import styled from 'styled-components';
 import H1 from 'components/H1';
+import Cube from 'components/Cube';
 
 let visList = [
   "https://www.youtube.com/embed/Tpba70L2BLo?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
@@ -74,6 +75,8 @@ const Video = styled.div`
 const Container = styled.div`
   height: 100%;
   width:100%
+  display: flex;
+  justify-content: center;
 `
 
 const Slide1 = styled.iframe`
@@ -98,12 +101,13 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     return (
       <Video>
         <Container className="music">
-          <H1>250mg</H1>
+
+          <Cube />
+          
           <Slide3 src={printLine(vis, 1)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide3>
           <Slide2 src={printLine(vis, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
           <Slide1 src={printLine(music, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide1>
         </Container>
-
       </Video>
     );
   }
