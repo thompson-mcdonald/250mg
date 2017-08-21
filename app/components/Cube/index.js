@@ -39,6 +39,7 @@ transform: rotateX(-90deg) translateZ(-100px);
 
 h1 {
 	color: white;
+	
 }
 `
 
