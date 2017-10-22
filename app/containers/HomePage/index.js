@@ -15,10 +15,10 @@ import styled from 'styled-components';
 
 let visList = [
   "https://www.youtube.com/embed/Tpba70L2BLo?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
-  "https://www.youtube.com/embed/S-VICwVEoBQ?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/ORsySi8VAD4?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/NM2wtte1JRE?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
-  "https://www.youtube.com/embed/OWvmlMmgbwI?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
-  "https://www.youtube.com/embed/XS-59dxplXo?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/eckD-kHGNnE?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/Z7o2KTxK6a4?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/XwkdmHt_Ez8?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/c9f9fi4WZSM?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/ZyBiiWwBbTg?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
@@ -26,11 +26,12 @@ let visList = [
   "https://www.youtube.com/embed/L3V7LKYPIUQ?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/vvbN-cWe0A0?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/fw9MEopiuS0?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
-  "https://www.youtube.com/embed/On2jbcMXhtY?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/G-JTRNnZMKY?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
   "https://www.youtube.com/embed/Z1AtiyMrVbE?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
-  "https://www.youtube.com/embed/6iJ2nD5RPfk?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244"
-
+  "https://www.youtube.com/embed/6iJ2nD5RPfk?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/HeZ9Qu5PE0g?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/eFIEdWrS0KU?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244",
+  "https://www.youtube.com/embed/odcb9UjPs9s?ecver=2&loop=1&autoplay=1&showinfo=0&mute=1&controls=0&vq=244"
 ]
 
 let musicList = [
@@ -38,6 +39,8 @@ let musicList = [
   "https://www.youtube.com/embed/FqgawnJLLiE?ecver=2&autoplay=1&loop=1",
   "https://www.youtube.com/embed/iiuhJPFTw9s?ecver=2&autoplay=1&loop=1",
   "https://www.youtube.com/embed/GJgXdSVFnJE?ecver=2&autoplay=1&loop=1",
+  "https://www.youtube.com/embed/Xw5AiRVqfqk?ecver=2&autoplay=1&loop=1",
+
   "https://www.youtube.com/embed/15wX9ftFAOI?ecver=2&autoplay=1&loop=1"
 
 ]
@@ -92,25 +95,15 @@ const Slide3 = styled.iframe`
   opacity: 0.5;
 `
 
-const TitleBit = styled.h1`
-  display: block;
-  text-align: center;
-  position: absolute;
-  margin: 0;
-  left: 0;
-  right: 0;
-  z-index: 1400;
-`
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <Video>
         <Container className="music">
-          <TitleBit><h1><blink>250mg</blink></h1></TitleBit>
-          <Slide3 src={printLine(vis, 1)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide3>
-          <Slide2 src={printLine(vis, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
-          <Slide1 src={printLine(music, 2)} width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide1>
+          <Slide3 src={printLine(vis, 1)} start="1" width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide3>
+          <Slide2 src={printLine(vis, 2)} start="1" width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide2>
+          <Slide1 src={printLine(music, 2)} start="1" width="100%" height="100%" frameBorder="0" autoplay='true' allowFullScreen></Slide1>
         </Container>
       </Video>
     );
