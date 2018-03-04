@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import styled from 'styled-components';
 import H1 from 'components/H1';
 
@@ -10,6 +10,8 @@ const Enviro = styled.div`
 	margin: 0 auto;
 	width: 100%;
 `
+
+
 
 const CubeDice = styled.div`
 	width: 50%;
@@ -39,7 +41,7 @@ transform: rotateX(-90deg) translateZ(-100px);
 
 h1 {
 	color: white;
-	
+
 }
 `
 

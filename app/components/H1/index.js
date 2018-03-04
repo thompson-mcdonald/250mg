@@ -1,4 +1,3 @@
-import react from 'React'
 import styled from 'styled-components'
 
 // Create a Title component that'll render an <h1> tag with some styles
@@ -25,7 +24,5 @@ text-shadow: 0 1px 0 #ccc,
 						 0 10px 10px rgba(0,0,0,.2),
 						 0 20px 20px rgba(0,0,0,.15);
 `;
-
-H1.propTypes = {}
 
 export default H1
